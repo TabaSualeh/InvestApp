@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:investapp/constants/colors.dart';
+import 'package:investapp/screens/createaccount.dart';
 import 'package:investapp/screens/splash.dart';
 
 void main() {
@@ -20,7 +21,6 @@ class MyApp extends StatelessWidget {
           ),
           scaffoldBackgroundColor: Txtwhite,
           buttonColor: Color(0xff31A062),
-
           textTheme: TextTheme(
             // Heading 1
             displayLarge: GoogleFonts.dmSans(

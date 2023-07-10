@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:investapp/constants/colors.dart';
+import 'package:investapp/screens/createaccount.dart';
+import 'package:investapp/screens/login.dart';
 import 'package:investapp/widgets/button.dart';
 
 class Signup extends StatelessWidget {
@@ -35,10 +37,14 @@ class Signup extends StatelessWidget {
                 btnName: "Create Account",
                 topMargin: 50,
                 bottomMargin: 13,
-                callback: () {},
+                callback: () {
+                  toCreateAccout(context);
+                },
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    toLoginPage(context);
+                  },
                   style: TextButton.styleFrom(primary: Txtwhite),
                   child: Text(
                     "Login",
@@ -49,5 +55,15 @@ class Signup extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void toCreateAccout(BuildContext context) {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => const CreateAccount()));
+  }
+
+  void toLoginPage(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const LoginPage()));
   }
 }
