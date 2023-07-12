@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
   final double toppad;
   final double leftpad;
   final double rightpad;
+  final double radius;
 
   CustomButton({
     required this.btnName,
@@ -24,8 +25,9 @@ class CustomButton extends StatelessWidget {
     this.height = 60.0,
     this.width = 354.0,
     this.fontsize = 20,
-    this.buttonBackgroundColor = const Color(0xff31A062),
-    this.fontColor = const Color(0xffFFFFFF),
+    this.buttonBackgroundColor,
+    this.fontColor,
+    this.radius = 0.0,
     this.bottomMargin = 0.0,
     this.leftMargin = 0.0,
     this.topMargin = 0,
@@ -56,13 +58,20 @@ class CustomButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: Theme.of(context).buttonColor,
+          borderRadius: radius >= 1
+              ? BorderRadius.circular(radius)
+              : BorderRadius.circular(20),
+          color: buttonBackgroundColor ?? Theme.of(context).buttonColor,
         ),
         child: Center(
           child: Text(
             btnName,
-            style: Theme.of(context).textTheme.labelLarge,
+            style: fontColor != null
+                ? Theme.of(context)
+                    .textTheme
+                    .labelLarge!
+                    .copyWith(color: fontColor)
+                : Theme.of(context).textTheme.labelLarge,
           ),
         ),
       ),
