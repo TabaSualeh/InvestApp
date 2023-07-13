@@ -3,6 +3,7 @@ import 'package:investapp/constants/colors.dart';
 import 'package:investapp/screens/homepage.dart';
 import 'package:investapp/screens/signup.dart';
 import 'package:investapp/widgets/Appbar.dart';
+import 'package:investapp/widgets/BottomBar.dart';
 import 'package:investapp/widgets/button.dart';
 
 class LoginPage extends StatelessWidget {
@@ -66,7 +67,7 @@ class LoginPage extends StatelessWidget {
     //     context, MaterialPageRoute(builder: ((context) => const HomePage())));
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (BuildContext context) => HomePage()),
+      MaterialPageRoute(builder: (BuildContext context) => Bottombar()),
       ModalRoute.withName(' '),
     );
   }

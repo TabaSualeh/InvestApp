@@ -43,9 +43,11 @@ class _ListBarState extends State<ListBar> {
               width: 20,
             ),
             Image(
+                width: 61,
+                height: 61,
                 image: AssetImage(
-              widget.listInvestment.imagePath,
-            )),
+                  widget.listInvestment.imagePath,
+                )),
           ],
         ));
   }

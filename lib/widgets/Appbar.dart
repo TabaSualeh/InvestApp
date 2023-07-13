@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyAppbar {
+  final Color? bgColor;
+  MyAppbar({this.bgColor});
   appbarwithback(BuildContext context, String title, bool isHomepage) {
     return AppBar(
+      backgroundColor: bgColor ?? Theme.of(context).appBarTheme.backgroundColor,
       automaticallyImplyLeading: false,
       leading: isHomepage == true
           ? IconButton(

@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 2), toTheSignUpPage);
+    Future.delayed(Duration(seconds: 5), toTheSignUpPage);
     super.initState();
   }
 
@@ -24,8 +24,6 @@ class _SplashScreenState extends State<SplashScreen> {
           builder: (context) => Signup(),
         ));
   }
-
-
 
   @override
   Widget build(BuildContext context) {
