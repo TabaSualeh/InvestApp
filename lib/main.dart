@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               type: BottomNavigationBarType.fixed,
               elevation: 0,
-              backgroundColor: const Color(0xffF6F6F9),
+              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
               showUnselectedLabels: true,
               selectedIconTheme: const IconThemeData(size: 26, opacity: 1),
               unselectedIconTheme: const IconThemeData(
@@ -63,46 +63,44 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Txtwhite,
           buttonColor: const Color(0xff31A062),
           textTheme: TextTheme(
-              // Heading 1
-              displayLarge: GoogleFonts.dmSans(
-                  fontSize: 28, fontWeight: FontWeight.w700, color: HTxtblack),
-              //Heading 2 Best Plans
-              displayMedium: GoogleFonts.dmSans(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w700,
-                  color: HTxtblack,
-                  letterSpacing: 0.8),
-              //Subtitles SF PRO TEXT
-              bodyLarge: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.w500, color: Txtgrey),
-              //BUtton text
-              labelLarge: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.w600, color: Txtwhite),
-              //Text BUtton
-              labelMedium: GoogleFonts.montserrat(
-                  fontSize: 15, fontWeight: FontWeight.w600, color: Btngreen62),
-              //Hint Text
-              labelSmall: GoogleFonts.montserrat(
-                fontSize: 17,
-                fontWeight: FontWeight.w400,
-                color: HintTxtgrey.withOpacity(0.8),
-              ),
-              // Read text See all
-              displaySmall: GoogleFonts.roboto(
-                  fontSize: 18,
-                  color: Txtred,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 0.8),
-              //List Bar heading
-              bodyMedium: GoogleFonts.dmSans(
-                  fontSize: 18, fontWeight: FontWeight.w700, color: Txtgrey),
-              bodySmall: GoogleFonts.roboto(
-                  fontSize: 14, fontWeight: FontWeight.w400, color: TxtLgrey),
-              headlineSmall: GoogleFonts.catamaran(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: ProfTblack),
-                  )),
+            // Heading 1
+            displayLarge: GoogleFonts.dmSans(
+                fontSize: 28, fontWeight: FontWeight.w700, color: HTxtblack),
+            //Heading 2 Best Plans
+            displayMedium: GoogleFonts.dmSans(
+                fontSize: 22,
+                fontWeight: FontWeight.w700,
+                color: HTxtblack,
+                letterSpacing: 0.8),
+            //Subtitles SF PRO TEXT
+            bodyLarge: GoogleFonts.montserrat(
+                fontSize: 15, fontWeight: FontWeight.w500, color: Txtgrey),
+            //BUtton text
+            labelLarge: GoogleFonts.montserrat(
+                fontSize: 15, fontWeight: FontWeight.w600, color: Txtwhite),
+            //Text BUtton
+            labelMedium: GoogleFonts.montserrat(
+                fontSize: 15, fontWeight: FontWeight.w600, color: Btngreen62),
+            //Hint Text
+            labelSmall: GoogleFonts.montserrat(
+              fontSize: 17,
+              fontWeight: FontWeight.w400,
+              color: HintTxtgrey.withOpacity(0.8),
+            ),
+            // Read text See all
+            displaySmall: GoogleFonts.roboto(
+                fontSize: 18,
+                color: Txtred,
+                fontWeight: FontWeight.w500,
+                letterSpacing: 0.8),
+            //List Bar heading
+            bodyMedium: GoogleFonts.dmSans(
+                fontSize: 18, fontWeight: FontWeight.w700, color: Txtgrey),
+            bodySmall: GoogleFonts.roboto(
+                fontSize: 14, fontWeight: FontWeight.w400, color: TxtLgrey),
+            headlineSmall: GoogleFonts.catamaran(
+                fontSize: 14, fontWeight: FontWeight.w400, color: ProfTblack),
+          )),
       home: SplashScreen(),
     );
   }

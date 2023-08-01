@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppbar().appbarwithback(context, "", false),
+      appBar: MyAppbar().appbarwithback(context, "", false,false),
       body: SingleChildScrollView(
         child: Center(
           child: Column(

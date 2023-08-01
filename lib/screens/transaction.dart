@@ -7,7 +7,7 @@ class Transaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppbar().appbarwithback(context, "Transaction", false),
+      appBar: MyAppbar().appbarwithback(context, "Transaction", false,true),
       body: Center(child: Text("Transaction")),
     );
   }

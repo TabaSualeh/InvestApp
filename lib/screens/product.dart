@@ -7,7 +7,7 @@ class Product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppbar().appbarwithback(context, "Product", false),
+      appBar: MyAppbar().appbarwithback(context, "Product", false,true),
       body: Center(child: Text("Product")),
     );
   }

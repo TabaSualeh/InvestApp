@@ -6,7 +6,7 @@ class BankAccountInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppbar().appbarwithback(context, "Bank Account info", false),
+      appBar: MyAppbar().appbarwithback(context, "Bank Account info", false,false),
       body: ListView(
         padding: EdgeInsets.only(right: 15, left: 15),
         children: [

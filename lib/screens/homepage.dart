@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppbar().appbarwithback(context, "", true),
+      appBar: MyAppbar().appbarwithback(context, "", true, false),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10.0, bottom: 5),
+                  padding: const EdgeInsets.only(top: 20.0, bottom: 10),
                   child: PortfolioCard(callback: showMyAsset),
                 ),
                 Row(
@@ -64,29 +64,27 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Expanded(
-            child: SizedBox(
-              // width: double.infinity,
-              height: double.infinity,
-              child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                scrollDirection: Axis.horizontal,
-                itemBuilder: ((context, index) {
-                  String item = plancardslist[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(
-                      right: 20.0,
-                    ),
-                    child: PlanCard(
-                      plans: item,
-                      width: 134,
-                      height: 170,
-                    ),
-                  );
-                }),
-                itemCount: plancardslist.length,
-              ),
+          SizedBox(
+            height: 180,
+            child: ListView.builder(
+              shrinkWrap: true,
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: ((context, index) {
+                String item = plancardslist[index];
+                return Padding(
+                  padding: const EdgeInsets.only(
+                    right: 20.0,
+                  ),
+                  child: PlanCard(
+                    plans: item,
+                    width: 134,
+                    height: 170,
+                  ),
+                );
+              }),
+              itemCount: plancardslist.length,
             ),
           ),
           Padding(

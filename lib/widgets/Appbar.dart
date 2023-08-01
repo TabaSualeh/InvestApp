@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:investapp/widgets/BottomBar.dart';
 
 class MyAppbar {
   final Color? bgColor;
   MyAppbar({this.bgColor});
-  appbarwithback(BuildContext context, String title, bool isHomepage) {
+  appbarwithback(
+      BuildContext context, String title, bool isHomepage, bool isExit) {
     return AppBar(
       backgroundColor: bgColor ?? Theme.of(context).appBarTheme.backgroundColor,
       automaticallyImplyLeading: false,
@@ -21,9 +24,18 @@ class MyAppbar {
           : IconButton(
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: isExit == true
+                  ? () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => Bottombar()),
+                        ModalRoute.withName(' '),
+                      );
+                    }
+                  : () {
+                      Navigator.pop(context);
+                    },
               icon: const Icon(
                 Icons.arrow_back_ios_new_rounded,
               ),

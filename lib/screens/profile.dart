@@ -26,7 +26,7 @@ class Profile extends StatelessWidget {
 
     return Scaffold(
       // backgroundColor: Color(0xffF6F6F9),
-      appBar: MyAppbar().appbarwithback(context, "", false),
+      appBar: MyAppbar().appbarwithback(context, "", false,true),
       body: Center(
         child: Column(
           children: [

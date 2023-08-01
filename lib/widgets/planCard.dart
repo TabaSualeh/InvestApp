@@ -38,8 +38,8 @@ class PlanCard extends StatelessWidget {
             if (plans == "gold") ...[
               Image.asset("assets/goldplan.png"),
               Positioned(
-                  bottom: 88,
-                  right: 25,
+                  bottom: 99,
+                  right: 36,
                   child: Text("Gold\n30% return",
                       style: Theme.of(context)
                           .textTheme
@@ -48,8 +48,8 @@ class PlanCard extends StatelessWidget {
             ] else if (plans == "silver") ...[
               Image.asset("assets/silverplan.png"),
               Positioned(
-                  bottom: 88,
-                  right: 25,
+                  bottom: 99,
+                  right: 36,
                   child: Text("Silver\n60% return",
                       style: Theme.of(context)
                           .textTheme
@@ -70,12 +70,12 @@ class PlanCard extends StatelessWidget {
               Image.asset(
                 "assets/platinumplan.png",
                 width: 120,
-                height: 88,
+                height: 94,
                 opacity: const AlwaysStoppedAnimation(.7),
               ),
               Positioned(
-                  bottom: 88,
-                  right: 25,
+                  bottom: 99,
+                  right: 36,
                   child: Text("Platinum\n90% return",
                       style: Theme.of(context)
                           .textTheme
